@@ -1,0 +1,31 @@
+{
+  "name": "adobe-test",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@spectrum-css/actionbutton": "^1.0.0-beta.1",
+    "@spectrum-css/button": "^3.0.0-beta.6",
+    "@spectrum-css/buttongroup": "^3.0.0-beta.6",
+    "@spectrum-css/checkbox": "^3.0.0-beta.6",
+    "@spectrum-css/dialog": "^3.0.0-beta.6",
+    "@spectrum-css/divider": "^1.0.0-beta.3",
+    "@spectrum-css/icon": "^3.0.0-beta.2",
+    "@spectrum-css/modal": "^3.0.0-beta.3",
+    "@spectrum-css/page": "^3.0.0-beta.0",
+    "@spectrum-css/table": "^3.0.0-beta.6",
+    "@spectrum-css/textfield": "^3.0.0-beta.6",
+    "@spectrum-css/typography": "^3.0.0-beta.1",
+    "@spectrum-css/underlay": "^2.0.8-beta.2",
+    "@spectrum-css/vars": "^3.0.0-beta.2",
+    "katex": "^0.12.0",
+    "loadicons": "^1.0.0",
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "vite": "^1.0.0-rc.13"
+  }
+}
