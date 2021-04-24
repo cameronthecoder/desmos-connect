@@ -26,7 +26,7 @@ export function useCalculator() {
       }
       setLastEvent("{}");
     }
-    expressions.value = calculator.value.getExpressions();
+    expressions.value = calculator.value.getState().expressions.list;
   };
 
   const getOptions = (role, selectedParticipants = []) => {

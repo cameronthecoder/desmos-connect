@@ -46,7 +46,7 @@
           id="expressions"
           :key="expression.id"
         >
-          <Expression v-if="expression.latex" :expression="expression" />
+          <Expression :expression="expression" />
         </div>
       </div>
       <div id="calculator" ref="calc" />

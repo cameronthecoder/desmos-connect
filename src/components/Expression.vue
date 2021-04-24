@@ -5,7 +5,12 @@
         class="expression_color"
         :style="{ backgroundColor: expression.color }"
       />
-      <h3 ref="expressionLatex" />
+      <h3 ref="expressionLatex" class="latex" />
+    </div>
+  </div>
+  <div v-else-if="expression.type == 'text'">
+    <div class="expression">
+      <h3>{{expression.text}}</h3>
     </div>
   </div>
 </template>
@@ -41,7 +46,7 @@ export default {
 };
 </script>
 <style>
-.expression h3 {
+.expression .latex {
   line-height: 3px;
 }
 .expression {
