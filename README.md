@@ -1,16 +1,16 @@
 # Desmos Pod
-![Image of Desmos Pod for host role](https://i.imgur.com/DU3vitS.png)
+![Image of Desmos pod with the host role](https://i.imgur.com/DU3vitS.png)
 
-This is a custom pod that is designed for Adobe Connect that allows you to have a fully-functioning Desmos graphing calculator right inside of your meeting.
+This is a custom pod that is designed for Adobe Connect that allows you to have a fully-functioning Desmos graphing calculator right inside of your meeting. **NOTE: This pod does NOT work with the Classic view in Adobe Connect**
 
 Features:
 - Expressions
+- Notes
 - Participant Access
 - Import from URL
 
 Support for these features are coming soon:
 - Tables
-- Notes
 - Pictures
 
 # Build Process
@@ -23,7 +23,10 @@ To build this project manually, follow these steps:
 6. Enjoy!
 
 # Contributions
-Feel free to contribute to this project if you have any feature suggestions, bug fixes, or issues.
+Feel free to contribute to this project if you have any feature suggestions, bug fixes, or issues :)
+
+# Support
+If you need support or want to get in touch, email me at camnooten@gmail.com.
 
 # License
 MIT
