@@ -74,13 +74,9 @@ export default {
     const isAccessDialogVisible = ref(false);
     const isImportDialogVisible = ref(false);
 
-    const toggleAccessDialog = () => {
-      isAccessDialogVisible.value = !isAccessDialogVisible.value;
-    };
+    const toggleAccessDialog = () => isAccessDialogVisible.value = !isAccessDialogVisible.value;
 
-    const toggleImportDialog = () => {
-      isImportDialogVisible.value = !isImportDialogVisible.value;
-    };
+    const toggleImportDialog = () => isImportDialogVisible.value = !isImportDialogVisible.value;
 
     return {
       calc,

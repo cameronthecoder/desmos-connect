@@ -13,8 +13,6 @@ export function useCPU() {
     }
   };
 
-
-
   watch(selected, () => {
     if (cpu.value) {
       const userConfig = getConfig();
@@ -25,7 +23,6 @@ export function useCPU() {
   const onConfigured = () => {
     console.log("Configured");
   };
-
 
   const onRoleChanged = (e) => {
     const userConfig = getConfig();
@@ -57,8 +54,8 @@ export function useCPU() {
       if (cpu.value) {
         cpu.value.init(
           onConfigured,
-          "com.camerondahl.coordinateplanepod",
-          "9.5.001",
+          "com.camerondahl.desmos",
+          "1.0.001",
           "connectsdkhook"
         );
         cpu.value.registerCallback(
