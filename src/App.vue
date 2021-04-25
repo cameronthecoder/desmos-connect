@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DesmosCalculator from './components/DesmosCalculator.vue'
+import DesmosCalculator from './components/GraphingConnect.vue'
 export default {
   name: 'App',
   components: {

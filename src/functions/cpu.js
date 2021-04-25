@@ -6,7 +6,6 @@ const role = ref(null);
 const selected = ref([]);
 
 export function useCPU() {
-
   const getConfig = () => {
     if (cpu.value) {
       return cpu.value.getConfig();
@@ -54,7 +53,7 @@ export function useCPU() {
       if (cpu.value) {
         cpu.value.init(
           onConfigured,
-          "com.camerondahl.desmos",
+          "com.camerondahl.graphingconnect",
           "1.0.001",
           "connectsdkhook"
         );
