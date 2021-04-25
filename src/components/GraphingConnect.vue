@@ -1,6 +1,7 @@
 <template>
   <access-dialog v-if="role == 'owner'" :is-visible="isAccessDialogVisible" @toggleModal="toggleAccessDialog()" />
   <import-dialog v-if="role == 'owner'" :is-visible="isImportDialogVisible" @toggleModal="toggleImportDialog()" />
+  <analytics-dialog :is-visible="isAnalyticsDialogVisible" @toggleModal="toggleAnalyticsDialog()" />
   <div id="col-container">
     <div v-if="role == 'owner' || !role" id="toolbar">
       <button
@@ -60,22 +61,25 @@ import { useCPU } from "../functions/cpu";
 import Expression from "./Expression.vue";
 import AccessDialog from "./AccessDialog.vue";
 import ImportDialog from "./ImportDialog.vue";
+import AnalyticsDialog from "./AnalyticsDialog.vue";
 import { ref } from "vue";
 
 export default {
   components: {
     Expression,
     AccessDialog,
-    ImportDialog
+    ImportDialog,
+    AnalyticsDialog
   },
   setup() {
     const { role } = useCPU();
     const { calc, expressions, isUserIncluded } = useCalculator();
     const isAccessDialogVisible = ref(false);
     const isImportDialogVisible = ref(false);
+    const isAnalyticsDialogVisible = ref(localStorage.getItem('graphingConnectModal') !== "true");
 
     const toggleAccessDialog = () => isAccessDialogVisible.value = !isAccessDialogVisible.value;
-
+    const toggleAnalyticsDialog = () => isAnalyticsDialogVisible.value = !isAnalyticsDialogVisible.value;
     const toggleImportDialog = () => isImportDialogVisible.value = !isImportDialogVisible.value;
 
     return {
@@ -84,6 +88,8 @@ export default {
       role,
       isUserIncluded,
       isAccessDialogVisible,
+      isAnalyticsDialogVisible,
+      toggleAnalyticsDialog,
       isImportDialogVisible,
       toggleAccessDialog,
       toggleImportDialog,

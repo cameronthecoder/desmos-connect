@@ -33,20 +33,10 @@
                     <label class="spectrum-Checkbox spectrum-Table-checkbox">
                       <input
                         type="checkbox"
-                        class="spectrum-Checkbox-input"
                         title="Select All"
                         v-model="selectAll"
                         :disabled="participants.length == 0"
                       />
-                      <span class="spectrum-Checkbox-box">
-                        <svg
-                          class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark"
-                          focusable="false"
-                          aria-hidden="true"
-                        >
-                          <use xlink:href="#spectrum-css-icon-Checkmark75" />
-                        </svg>
-                      </span>
                     </label>
                   </th>
                   <th class="spectrum-Table-headCell">ID</th>
@@ -68,7 +58,6 @@
                     <label class="spectrum-Checkbox spectrum-Table-checkbox">
                       <input
                         type="checkbox"
-                        class="spectrum-Checkbox-input"
                         title="Select"
                         :value="participant.id"
                         v-model="selected"
@@ -80,15 +69,6 @@
                           selectAll || selected.includes(participant.id)
                         "
                       />
-                      <span class="spectrum-Checkbox-box">
-                        <svg
-                          class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark"
-                          focusable="false"
-                          aria-hidden="true"
-                        >
-                          <use xlink:href="#spectrum-css-icon-Checkmark75" />
-                        </svg>
-                      </span>
                     </label>
                   </td>
                   <td class="spectrum-Table-cell">{{ participant.id }}</td>
