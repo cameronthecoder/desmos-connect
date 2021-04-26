@@ -1,18 +1,33 @@
 <template>
-  <access-dialog v-if="role == 'owner'" :is-visible="isAccessDialogVisible" @toggleModal="toggleAccessDialog()" />
-  <import-dialog v-if="role == 'owner'" :is-visible="isImportDialogVisible" @toggleModal="toggleImportDialog()" />
-  <analytics-dialog :is-visible="isAnalyticsDialogVisible" @toggleModal="toggleAnalyticsDialog()" />
+  <access-dialog
+    v-if="role == 'owner'"
+    :is-visible="isAccessDialogVisible"
+    @toggleModal="toggleAccessDialog()"
+  />
+  <import-dialog
+    v-if="role == 'owner'"
+    :is-visible="isImportDialogVisible"
+    @toggleModal="toggleImportDialog()"
+  />
+  <about-dialog
+    :is-visible="isAboutDialogVisible"
+    @toggleModal="toggleAboutDialog()"
+  />
   <div id="col-container">
-    <div v-if="role == 'owner' || !role" id="toolbar">
+    <div id="toolbar">
       <button
         class="spectrum-ActionButton spectrum-ActionButton--sizeM"
         @click="toggleAccessDialog()"
+        v-if="role == 'owner'"
       >
         <span class="spectrum-ActionButton-label">Participant Access</span>
       </button>
-      
 
-      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" @click="toggleImportDialog()">
+      <button
+        class="spectrum-ActionButton spectrum-ActionButton--sizeM"
+        @click="toggleImportDialog()"
+        v-if="role == 'owner'"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="spectrum-Icon spectrum-Icon--sizeS"
@@ -35,12 +50,15 @@
         </svg>
         <span class="spectrum-ActionButton-label">Import from URL</span>
       </button>
+      <button
+        class="spectrum-ActionButton spectrum-ActionButton--sizeM"
+        @click="toggleAboutDialog()"
+      >
+        <span class="spectrum-ActionButton-label">About</span>
+      </button>
     </div>
     <div id="container">
-      <div
-        v-if="role == 'viewer'"
-        id="expressions_panel"
-      >
+      <div v-if="role == 'viewer'" id="expressions_panel">
         <h1>Expressions</h1>
         <div
           v-for="expression in expressions"
@@ -61,7 +79,7 @@ import { useCPU } from "../functions/cpu";
 import Expression from "./Expression.vue";
 import AccessDialog from "./AccessDialog.vue";
 import ImportDialog from "./ImportDialog.vue";
-import AnalyticsDialog from "./AnalyticsDialog.vue";
+import AboutDialog from "./AboutDialog.vue";
 import { ref } from "vue";
 
 export default {
@@ -69,18 +87,21 @@ export default {
     Expression,
     AccessDialog,
     ImportDialog,
-    AnalyticsDialog
+    AboutDialog,
   },
   setup() {
     const { role } = useCPU();
     const { calc, expressions, isUserIncluded } = useCalculator();
     const isAccessDialogVisible = ref(false);
     const isImportDialogVisible = ref(false);
-    const isAnalyticsDialogVisible = ref(localStorage.getItem('graphingConnectModal') !== "true");
+    const isAboutDialogVisible = ref(false);
 
-    const toggleAccessDialog = () => isAccessDialogVisible.value = !isAccessDialogVisible.value;
-    const toggleAnalyticsDialog = () => isAnalyticsDialogVisible.value = !isAnalyticsDialogVisible.value;
-    const toggleImportDialog = () => isImportDialogVisible.value = !isImportDialogVisible.value;
+    const toggleAccessDialog = () =>
+      (isAccessDialogVisible.value = !isAccessDialogVisible.value);
+    const toggleAboutDialog = () =>
+      (isAboutDialogVisible.value = !isAboutDialogVisible.value);
+    const toggleImportDialog = () =>
+      (isImportDialogVisible.value = !isImportDialogVisible.value);
 
     return {
       calc,
@@ -88,11 +109,11 @@ export default {
       role,
       isUserIncluded,
       isAccessDialogVisible,
-      isAnalyticsDialogVisible,
-      toggleAnalyticsDialog,
+      isAboutDialogVisible,
       isImportDialogVisible,
       toggleAccessDialog,
       toggleImportDialog,
+      toggleAboutDialog,
     };
   },
 };
@@ -100,7 +121,7 @@ export default {
 <style>
 #toolbar {
   padding: 2px;
-  display: flex; 
+  display: flex;
   gap: 0px 5px;
 }
 #col-container {

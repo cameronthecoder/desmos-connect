@@ -13,7 +13,7 @@
         aria-modal="true"
       >
         <div class="spectrum-Dialog-grid">
-          <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">
+          <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader" ref="partaccess">
             Participant Access
           </h1>
           <hr
@@ -120,6 +120,8 @@ export default {
   setup(props, { emit }) {
     const { cpu, selected } = useCPU();
     const participants = ref([]);
+    const partaccess = ref();
+    
 
     const enableAccess = () => {
       if (cpu.value) {
@@ -218,6 +220,7 @@ export default {
       selectAll,
       displayRole,
       enableAccess,
+      partaccess,
       close,
     };
   },

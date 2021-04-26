@@ -20,39 +20,39 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     to-fast-properties "^2.0.0"
 
-"@spectrum-css/actionbutton@^1.0.0-beta.1":
+"@spectrum-css/actionbutton@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/actionbutton/-/actionbutton-1.0.3.tgz#8f7342a69b303c5acdcfa0a59f5e9267b9f3cb30"
   integrity sha512-P9qoCPSiZ1SB6ZYqK5hub0vGty00YYqonQE0KTjtb1i+T1nYR/87vWqVPERx9j63uhgZncjwFYaThTvRqye7eQ==
 
-"@spectrum-css/button@^3.0.0-beta.6":
+"@spectrum-css/button@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/button/-/button-3.0.3.tgz#2df1efaab6c7e0b3b06cb4b59e1eae59c7f1fc84"
   integrity sha512-6CnLPqqtaU/PcSSIGeGRi0iFIIxIUByYLKFO6zn5NEUc12KQ28dJ4PLwB6WBa0L8vRoAGlnWWH2ZZweTijbXgg==
 
-"@spectrum-css/buttongroup@^3.0.0-beta.6":
+"@spectrum-css/buttongroup@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/buttongroup/-/buttongroup-3.0.3.tgz#719d868845ac9d2c4f939c1b9f6044507902d5aa"
   integrity sha512-eXl8U4QWMWXqyTu654FdQdEGnmczgOYlpIFSHyCMVjhtPqZp2xwnLFiGh6LKw+bLio6eeOZ0L+vpk1GcoYqgkw==
 
-"@spectrum-css/checkbox@^3.0.0-beta.6":
+"@spectrum-css/checkbox@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/checkbox/-/checkbox-3.0.3.tgz#8577067fc8b97e4609f92bd242364937a533a7bb"
   integrity sha512-QVG9uMHq+lh70Dh6mDNnY+vEvNz2p7VC6xgLfDYfijp2qeiqYPq72fQK6p/SiyqPk96ZACzNRwgeROU6Xf6Wgg==
 
-"@spectrum-css/dialog@^3.0.0-beta.6":
+"@spectrum-css/dialog@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/dialog/-/dialog-3.0.3.tgz#7715a4ea435e753afb623d99ca5917ed1bcd6f34"
   integrity sha512-AhmKgfRIVyTe3ABiJ8lLUQL34VB/H6fN16na2LlbDRJvyRMzkdN1Xf2i6U3f4OMd3qQ8Gm5xat4BvMxIQPBAUQ==
 
-"@spectrum-css/divider@^1.0.0-beta.3":
+"@spectrum-css/divider@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-1.0.3.tgz#639e2ebaa0834efa40f42397668bbd5c153ea385"
   integrity sha512-Zy4Rn40w8UtzMh3wx/U9+CepSCpm1aOCGftHgWDub0XZuVTzh0c1WwyzTuLCx2Hf21z5VRGNiDh8bGEEzSbtNA==
   dependencies:
     "@spectrum-css/vars" "^3.0.2"
 
-"@spectrum-css/icon@^3.0.0-beta.2":
+"@spectrum-css/icon@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/icon/-/icon-3.0.3.tgz#5c612822380927087aebd526855d82ed2c3e2cba"
   integrity sha512-hyloKOejPCXhP3MBNsm3SjR9j8xT1R1S19p32KW/0Qhj+VMUtfyEPmevyFptpn7wcovQccdl/vZVIVDuML/imw==
@@ -69,7 +69,7 @@
   dependencies:
     "@spectrum-css/vars" "^3.0.2"
 
-"@spectrum-css/table@^3.0.0-beta.6":
+"@spectrum-css/table@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@spectrum-css/table/-/table-3.0.3.tgz#7f7f19905ef3275cbf907ce3a5818e63c30b2caf"
   integrity sha512-nxwzVjLPsXoY/v4sdxOVYLcC+cEbGgJyLcLclT5LT9MGSbngFeUMJzzVR4EvehzuN4dH7hrATG7Mbuq29Mf0Hg==
@@ -269,9 +269,9 @@ icss-utils@^5.0.0:
   integrity sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==
 
 is-core-module@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.2.0.tgz#97037ef3d52224d85163f5597b2b63d9afed981a"
-  integrity sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK/uNwMHhIkPWO0g8msXcbzLe+MpGoR951MlqM/2iIlU4vKDdQ==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.3.0.tgz#d341652e3408bca69c4671b79a0954a3d349f887"
+  integrity sha512-xSphU2KG9867tsYdLD4RWQ1VqdFl4HTO9Thf3I/3dLEfr0dbPTWKsuCKrgqMljg4nPE+Gq0VCnzT3gr0CyBmsw==
   dependencies:
     has "^1.0.3"
 

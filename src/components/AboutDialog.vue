@@ -15,13 +15,35 @@
       >
         <div class="spectrum-Dialog-grid">
           <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">
-            Opt-In Analytics
+            About Desmos Connect
           </h1>
           <hr
             class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider"
           />
           <section class="spectrum-Dialog-content">
-            <p>Graphing Connect uses analytics to determine the amount of people that are using the pod. The only information Graphing Connect collects is the country you are in. <strong>Do we have permission to collect this data?</strong></p>
+            <p class="spectrum-Body spectrum-Body--sizeS">
+              Copyright 2020-2021 Cameron Dahl
+            </p>
+            <p class="spectrum-Body spectrum-Body--sizeS">
+              This pod is not affiliated with Desmos or any of it's partners in
+              any way.
+            </p>
+            <p class="spectrum-Body spectrum-Body--sizeS">Version: 1.0.1</p>
+            <p class="spectrum-Body spectrum-Body--sizeS">
+              This project is licensed under the MIT license.
+            </p>
+            <button
+              @click="
+                this.$window.top.open(
+                  'https://github.com/cameronthecoder/desmos-connect',
+                  '_blank',
+                  'noopener'
+                )
+              "
+              class="spectrum-ActionButton spectrum-ActionButton--sizeS"
+            >
+              <span class="spectrum-Button-label">Source Code</span>
+            </button>
           </section>
 
           <div
@@ -32,14 +54,7 @@
               type="button"
               @click="close"
             >
-              <span class="spectrum-Button-label">No</span>
-            </button>
-            <button
-              class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item"
-              type="button"
-              @click="close"
-            >
-              <span class="spectrum-Button-label">Yes</span>
+              <span class="spectrum-Button-label">Close</span>
             </button>
           </div>
         </div>
@@ -49,23 +64,22 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from "@vue/reactivity";
+import { onMounted, watch } from "@vue/runtime-core";
 export default {
-    props: {
+  props: {
     isVisible: Boolean,
-    },
-    emits: ["toggleModal"],
-    setup(props, { emit }) {
-        localStorage.setItem('graphingConnectModal', true);
-        const close = () => {
-            emit("toggleModal");
-        };
+  },
+  emits: ["toggleModal"],
+  setup(props, { emit }) {
+    const close = () => {
+      emit("toggleModal");
+    };
 
-
-        return {
-            close
-        };
-    },
+    return {
+      close
+    };
+  },
 };
 </script>
 

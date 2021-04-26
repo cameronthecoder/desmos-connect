@@ -32,7 +32,6 @@ export function useCPU() {
   };
 
   const onSyncMessageReceived = (msg) => {
-    console.log(msg);
     const data = JSON.parse(msg.msgVal);
     switch (msg.msgNm) {
       case "changeCalc":
@@ -53,7 +52,7 @@ export function useCPU() {
       if (cpu.value) {
         cpu.value.init(
           onConfigured,
-          "com.camerondahl.graphingconnect",
+          "com.camerondahl.desmosconnect",
           "1.0.001",
           "connectsdkhook"
         );

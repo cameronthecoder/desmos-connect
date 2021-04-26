@@ -1,13 +1,13 @@
 <template>
-  <DesmosCalculator />
+  <desmos-connect />
 </template>
 
 <script>
-import DesmosCalculator from './components/GraphingConnect.vue'
+import DesmosConnect from './components/DesmosConnect.vue'
 export default {
   name: 'App',
   components: {
-    DesmosCalculator,
+    DesmosConnect,
   }
 }
 </script>

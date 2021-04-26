@@ -18,4 +18,6 @@ import '@spectrum-css/actionbutton/dist/index-vars.css'
 import '@spectrum-css/textfield/dist/index-vars.css'
 import '@spectrum-css/button/dist/index-vars.css'
 loadicons('spectrum-css-icons.svg')
-createApp(App).mount('#app')
+let app = createApp(App)
+app.mount('#app')
+app.config.globalProperties.$window = window
