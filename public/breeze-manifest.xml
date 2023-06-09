@@ -11,7 +11,6 @@
 			<file href="assets/index.css"/>
 			<file href="js/"/>
 			<file href="js/index.js"/>
-			<file href="js/vendor.js"/>
 		</asset>
 	</assets>
 </breeze-manifest>
